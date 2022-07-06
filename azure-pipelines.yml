@@ -32,4 +32,4 @@ steps:
     azureSubscription: 'Azure Connection'
     appType: 'webApp'
     WebAppName: 'abeliefnow'
-    packageForLinux: '$(Build.ArtifactStagingDirectory)/drop'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/drop/'
