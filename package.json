@@ -61,7 +61,6 @@
     "has": "^1.0.3",
     "got": "^9.6.0",
     "has-symbols": "^1.0.3",
-    "fsevents": "^2.3.2",
     "has-flag": "^3.0.0",
     "global-dirs": "^3.0.0",
     "glob-parent": "^5.1.2",
