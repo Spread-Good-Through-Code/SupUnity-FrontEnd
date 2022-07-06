@@ -25,3 +25,11 @@ steps:
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure Connection'
+    appType: 'webAppLinux'
+    WebAppName: 'ABelifeNow'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
