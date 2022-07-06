@@ -21,14 +21,15 @@ steps:
 - task: CopyFiles@2
   inputs:
     contents: '*'
-    targetFolder: - task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'Azure Connection'
-    appType: 'webApp'
-    appName: 'abeliefnow'
-    package: '$(Build.ArtifactStagingDirectory)/drop'
-    deploymentMethod: 'auto'
+    targetFolder: $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
 
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure Connection'
+    appType: 'webApp'
+    WebAppName: 'abeliefnow'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/drop'
