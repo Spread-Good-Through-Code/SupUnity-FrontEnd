@@ -3,8 +3,3 @@
 
 # Ignore node_modules folder
 node_modules
-public/.DS_Store
-public/TODO/.DS_Store
-SPECS/.DS_Store
-SPECS/TODO.rtf
-Thoughts/.DS_Store
