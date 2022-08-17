@@ -1,7 +1,10 @@
 const express = require("express");
-const { join } = require("path");
+const { join, resolve } = require("path");
+const cors = require("cors");
 const app = express();
 
+// Enable CORS to add React routes
+app.use(cors());
 // Serve static assets from the /public folder
 app.use(express.static(join(__dirname, "public")));
 
@@ -20,9 +23,11 @@ app.get("/LoggedIn.html", (_, res) => {
 });
 
 // Send all other requests to ReactJS
+app.use(express.static(resolve(__dirname, "client/build")));
+
 app.get("*", (_, res) => {
-  res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+  res.sendFile(resolve(__dirname, "client/build", "index.html"));
 });
 
 // Listen on port 3000
-app.listen(8080, () => console.log("Application running on port 3000"));
+app.listen(8080, () => console.log("Application running on port 8080"));
