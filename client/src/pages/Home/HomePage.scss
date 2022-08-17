@@ -1,0 +1,12 @@
+.sort-choice {
+  padding-inline: 8px;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.selected {
+  text-decoration: underline;
+}
