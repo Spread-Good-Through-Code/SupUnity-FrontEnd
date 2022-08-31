@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import "./css/normalize.css";
-import "./css/skeleton.css";
+import { BrowserRouter } from "react-router-dom";
+
 import "./index.css";
 import "./css/main.css";
+import "./css/normalize.css";
+import "./css/skeleton.css";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -14,7 +16,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

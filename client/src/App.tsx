@@ -1,10 +1,15 @@
+import { Routes, Route } from "react-router-dom";
+
+// Pages
 import Home from "./pages/Home";
+import LoggedInPage from "pages/LoggedIn";
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <Routes>
+      <Route index element={<Home />} />
+      <Route path="logged-in" element={<LoggedInPage />} />
+    </Routes>
   );
 }
 

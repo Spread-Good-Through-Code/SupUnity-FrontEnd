@@ -65,7 +65,7 @@ const Post = ({
       <p className="centerText mb-0">
         <span className="likes-heart">&#10084;</span> x{likes}
       </p>
-      <p className="centerText mb-0"> Sign in to view more details </p>
+      <p className="centerText mb-0">Sign in to view more details</p>
     </article>
   );
 };

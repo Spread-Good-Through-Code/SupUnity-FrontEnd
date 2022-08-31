@@ -8,8 +8,28 @@ label {
 }
 
 /* Margin */
+.mtb-2p {
+  margin-block: 2%;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-2p {
+  margin-top: 2%;
+}
+
+.mt-5p {
+  margin-top: 5%;
+}
+
 .mt-10p {
   margin-top: 10%;
+}
+
+.m-0 {
+  margin: 0;
 }
 
 .mb-0 {
@@ -31,4 +51,8 @@ label {
 
 .underline {
   text-decoration: underline;
+}
+
+.centerText {
+  text-align: center;
 }
