@@ -9,6 +9,7 @@ import Commitments from "./components/Commitments";
 import DonationsAndFulfilled from "./components/DonationsAndFulfilled";
 import OpenRequests from "./components/OpenRequests";
 import Donate from "components/Donate";
+import SubmitRequest from "./components/SubmitRequest";
 
 const LoggedInPage = () => {
   return (
@@ -55,6 +56,8 @@ const LoggedInPage = () => {
             <hr />
             <OpenRequests />
             <Donate />
+            <hr />
+            <SubmitRequest />
           </div>
         </div>
       </div>

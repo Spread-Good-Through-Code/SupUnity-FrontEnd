@@ -1,0 +1,36 @@
+button {
+  transition: 0.3s background-color;
+  text-decoration: none;
+}
+
+#btn-donate-type-once {
+  &.selected {
+    background-color: hsla(30, 100%, 59%, 1);
+    text-decoration: none;
+  }
+  &:hover:not(.selected) {
+    background-color: hsla(30, 100%, 70%, 0.8);
+  }
+}
+#btn-donate-type-recurring {
+  &.selected {
+    background-color: hsla(184, 100%, 45%, 1);
+    text-decoration: none;
+  }
+  &:hover:not(.selected) {
+    background-color: hsla(184, 100%, 80%, 0.8);
+  }
+}
+.btn-donate-amt {
+  &.selected {
+    background-color: hsla(109, 100%, 45%, 1);
+    text-decoration: none;
+  }
+  &:hover:not(.selected) {
+    background-color: hsla(109, 100%, 80%, 0.8);
+  }
+}
+
+#custom-amount-input {
+  text-align: right;
+}

@@ -36,9 +36,7 @@ const LocalPost = ({
           communityServiceReqs.map((item) => <li>{item}</li>)
         )}
       </ul>
-      <h4 className="local-post-section-heading">
-        Community Service Requirements
-      </h4>
+      <h4 className="local-post-section-heading">Submitted Proof</h4>
       <ul>
         {submittedProof.length === 0 ? (
           <li>Not Required</li>
