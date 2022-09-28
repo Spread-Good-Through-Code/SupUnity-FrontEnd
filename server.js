@@ -35,9 +35,9 @@ app.get("/auth_config.json", (req, res) => {
 //   res.sendFile(join(__dirname, "index.html"));
 // });
 
-app.get("/LoggedIn.html", (_, res) => {
+app.get("/LoggedIn.html", requiresAuth(),  (_, res) => {
 	
-  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out'); 
+ 
   res.sendFile(join(__dirname, "LoggedIn.html"));
 });
 
