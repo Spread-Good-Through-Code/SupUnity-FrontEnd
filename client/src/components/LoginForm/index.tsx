@@ -31,7 +31,7 @@ const LoginForm = () => {
           className="button button-primary"
           href="https://supunityproduction.azurewebsites.net/LoggedIn.html"
         >
-          Log In
+          Log In!
         </a>
         <button id="btn-logout" disabled={true} onClick={() => logout()}>
           Forgot Password
