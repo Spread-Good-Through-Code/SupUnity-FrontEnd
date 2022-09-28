@@ -1,4 +1,6 @@
 const { auth } = require('express-openid-connect'); 
+const { requiresAuth } = require('express-openid-connect');
+
 const config = {
   authRequired: false,
   auth0Logout: true,
