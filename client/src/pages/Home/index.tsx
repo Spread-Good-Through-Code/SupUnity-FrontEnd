@@ -53,7 +53,7 @@ const Home = () => {
           </div>
           <hr />
           <Post
-            city="Portland"
+            city="Portland!"
             state="OR"
             zipCode={97225}
             userName="User5234555"
