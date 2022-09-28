@@ -1,4 +1,7 @@
+
 const { auth } = require('express-openid-connect'); 
+const { requiresAuth } = require('express-openid-connect');
+
 const config = {
   authRequired: false,
   auth0Logout: true,
@@ -35,7 +38,7 @@ app.get("/auth_config.json", (req, res) => {
 //   res.sendFile(join(__dirname, "index.html"));
 // });
 
-app.get("/LoggedIn.html", auth(),  (_, res) => {
+app.get("/LoggedIn.html", requiresAuth(),  (_, res) => {
 	
  
   res.sendFile(join(__dirname, "LoggedIn.html"));
