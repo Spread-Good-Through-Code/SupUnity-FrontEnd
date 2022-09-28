@@ -1,7 +1,24 @@
+const { auth } = require('expresss-openid-connect'); 
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: 'a long, randomly-generated string stored in env',
+  baseURL: 'https://supunityproduction.azurewebsites.net',
+  clientID: 'h5gmUSnWPv3S0jMropNEJ5CT5KPl4bJn',
+  issuerBaseURL: 'https://supunity.us.auth0.com'
+};
+
+
 const express = require("express");
 const { join, resolve } = require("path");
 const cors = require("cors");
 const app = express();
+
+//Auth router attaches /login /logout and /callback routes to the baseURL
+
+app.use(auth(config)); 
+
+
 
 // Enable CORS to add React routes
 app.use(cors());
@@ -19,6 +36,8 @@ app.get("/auth_config.json", (req, res) => {
 // });
 
 app.get("/LoggedIn.html", (_, res) => {
+	
+  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out'); 
   res.sendFile(join(__dirname, "LoggedIn.html"));
 });
 
