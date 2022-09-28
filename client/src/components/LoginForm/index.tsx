@@ -29,7 +29,7 @@ const LoginForm = () => {
       <div className="btn-div">
         <a
           className="button button-primary"
-          href="https://abeliefnowlinux.azurewebsites.net/LoggedIn.html"
+          href="https://supunityproduction.azurewebsites.net/LoggedIn.html"
         >
           Log In
         </a>
