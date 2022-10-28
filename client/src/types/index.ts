@@ -18,3 +18,7 @@ export type TLocalPost = {
   communityServiceReqs: string[];
   submittedProof: string[];
 };
+
+export type TUser = {
+  username: string;
+};

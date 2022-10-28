@@ -1,0 +1,23 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+input {
+  margin-left: 15px;
+}
+
+.error {
+  color: red;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block-center {
+  display: block;
+  margin: 0 auto;
+}

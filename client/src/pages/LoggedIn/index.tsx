@@ -1,8 +1,13 @@
+import { useContext } from "react";
+
 import "./LoggedIn.scss";
 import type { TTrackedCommitment } from "types";
 
 // TempData
 import { trackedCommitments } from "tempData";
+
+// Context
+import UserContext from "context/user-context";
 
 // Components
 import Commitments from "./components/Commitments";
@@ -11,8 +16,8 @@ import OpenRequests from "./components/OpenRequests";
 import Donate from "components/Donate";
 import SubmitRequest from "./components/SubmitRequest";
 
-
 const LoggedInPage = () => {
+  const [user, setUser] = useContext(UserContext);
   return (
     <>
       <div className="container font-raleway">
@@ -27,13 +32,12 @@ const LoggedInPage = () => {
             </div>
             <hr />
             <p className="welcome-msg centerText">
-              Welcome to your community, John Smith!
+              Welcome to your community, {user ? user.username : "Current User"}
+              !
             </p>
             <hr />
             <h2 className="centerText"> Profile!</h2>
-            <p className="centerText profile-info">
-              User12313123 - John Smith
-            </p>
+            <p className="centerText profile-info">User12313123 - John Smith</p>
             <p className="centerText profile-info">
               &#9745; - Social Media Linked
             </p>
