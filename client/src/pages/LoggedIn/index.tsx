@@ -17,7 +17,7 @@ import Donate from "components/Donate";
 import SubmitRequest from "./components/SubmitRequest";
 
 const LoggedInPage = () => {
-  const [user, setUser] = useContext(UserContext);
+  const { user } = useContext(UserContext);
   return (
     <>
       <div className="container font-raleway">

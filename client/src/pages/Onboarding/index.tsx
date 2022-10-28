@@ -6,7 +6,7 @@ import "./Onboarding.scss";
 import UserContext from "context/user-context";
 
 const OnboardingPage = () => {
-  const [user, setUser] = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
   const [username, setUsername] = useState("");
   const [error, setError] = useState(false);
 

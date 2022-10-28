@@ -15,7 +15,7 @@ import OnboardingPage from "pages/Onboarding";
 function App() {
   const [user, setUser] = useState<TUser | null>(null);
   return (
-    <UserContext.Provider value={[user, setUser]}>
+    <UserContext.Provider value={{ user, setUser }}>
       <Routes>
         <Route index element={<Home />} />
         <Route path="logged-in" element={<LoggedInPage />} />
