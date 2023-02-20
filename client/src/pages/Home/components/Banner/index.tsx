@@ -3,7 +3,7 @@ const Banner = () => {
     <>
       <img
         src="https://locallifeline.files.wordpress.com/2022/07/logo-1.png?w=458&h=125"
-        alt=""
+        alt="Sup Unity Logo"
       />
       <br />
       <b>Sup?</b> Are you <b>United</b> with your comm<b>Unity</b>?!
